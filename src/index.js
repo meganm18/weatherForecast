@@ -11,35 +11,6 @@ import {
   Link
 } from "react-router-dom";
 
-/*
-export default function App() {
-  return(
-      <Router>
-          <div>
-              <nav>
-                  <ul>
-                      <li>
-                          <Link to="/">Home</Link>
-                      </li>
-                      <li>
-                          <Link to="/today">Today</Link>
-                      </li>
-                  </ul>
-              </nav>
-
-              <Switch>
-                  <Route path="/today">
-                      <Today />
-                  </Route>
-                  <Route path="/">
-                      <Weather />
-                  </Route>
-              </Switch>
-          </div>
-      </Router>
-  )
-}*/
-
 /* Open Weather api key: ff36e3cbaa2d73cc8e37f8bc0663f560
  API call: https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={part}&appid={YOUR API KEY}&units={units}
  Ashburn Coordinates: Lat: 39.0438 Long: -77.4874
