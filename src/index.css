@@ -66,13 +66,18 @@ th, td{
 }
 
 .dayInfoData{
-    width: 100%;
     display: flex;
     margin-left: 5%;
 }
 
+.dayBottom{
+    border: none;
+    margin-top: 0;
+    margin-right: 3%;
+}
+
 .dayInfoDataRight{
-    padding-top: 0;
+    margin-top: 0;
     margin-bottom: 0.25em;
     display: block;
 }

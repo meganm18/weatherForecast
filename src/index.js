@@ -89,7 +89,7 @@ function DayInfo(forcast){
   const week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
   return (
     <div className="dayInfoData">
-      <span className='day'>
+      <span className='dayBottom'>
         <b className='dayOfWeek'>
           {week[forcast.date.dayOfWeek]}
           <br />
