@@ -10,15 +10,11 @@ import {
   Route,
   Link
 } from "react-router-dom";
-
-/* Open Weather api key: ff36e3cbaa2d73cc8e37f8bc0663f560
+/*
  API call: https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={part}&appid={YOUR API KEY}&units={units}
+ API key: process.env.REACT_APP_OPEN_WEATHER_API_KEY
  Ashburn Coordinates: Lat: 39.0438 Long: -77.4874
  Image URL: http://openweathermap.org/img/wn/{weather.icon}@2x.png 
-*/
-
-/* API call to get date from unix dt: 
- https://showcase.api.linx.twenty57.net/UnixTime/fromunixtimestamp?unixtimestamp={dt}
 */
 
 function Weather(){
@@ -26,7 +22,7 @@ function Weather(){
   const [dayNum, setDayNum] = React.useState([]);
   const week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   React.useEffect(() =>{
-    axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=39.0438&lon=-77.4874&appid=ff36e3cbaa2d73cc8e37f8bc0663f560&units=imperial`)
+    axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=39.0438&lon=-77.4874&appid=`+process.env.REACT_APP_OPEN_WEATHER_API_KEY+`&units=imperial`)
       .then(res => {
         const newForcasts = res.data.daily
           .map(obj => ({
