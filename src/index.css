@@ -6,11 +6,16 @@ body{
 a{
     text-decoration: none;
     color: black;
+    text-align: center;
 }
-th, td{
+th{
     padding-bottom: 15px;
     padding-right: 15px;
-    font-weight: normal;
+    text-align: left;
+}
+td{
+    padding-bottom: 15px;
+    padding-left: 15px;
 }
 .title{
     display: flex;
@@ -24,8 +29,8 @@ th, td{
     display: flex;
     width: 90%;
     justify-content: space-between;
-    margin-left: 5%;
-    margin-right: 5%;
+    padding: 3%;
+
 }
 .dayOfWeek{
     margin-bottom: 0.5em;
@@ -64,20 +69,13 @@ th, td{
     display: flex;
     justify-content: center;
 }
-
 .dayInfoData{
     display: flex;
-    margin-left: 5%;
+    padding: 3%;
 }
-
 .dayBottom{
     border: none;
     margin-top: 0;
     margin-right: 3%;
-}
-
-.dayInfoDataRight{
-    margin-top: 0;
-    margin-bottom: 0.25em;
-    display: block;
+    text-align: center;
 }

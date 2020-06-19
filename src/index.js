@@ -39,10 +39,7 @@ function Weather(){
             dayFeels: `${obj.feels_like.day}`,
             nightFeels: `${obj.feels_like.night}`,
             eveFeels: `${obj.feels_like.eve}`,
-            mornFeels: `${obj.feels_like.morn}`,
-            pressure: `${obj.pressure}`,
-            humidity: `${obj.humidity}`,
-
+            mornFeels: `${obj.feels_like.morn}`
           }))         
         setForcasts(newForcasts);
       });
@@ -89,6 +86,36 @@ function DayInfo(forcast){
   const week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
   return (
     <div className="dayInfoData">
+      
+      <div className="dayInfoDataRight">  
+        <table>
+          <tr>
+            <th></th>
+            <th>Temperature (&#8457;)</th>
+            <th>Feels Like (&#8457;)</th>
+          </tr>
+          <tr>
+            <th>Morning</th>
+            <td>{forcast.date.mornTemp}</td>
+            <td>{forcast.date.mornFeels}</td>
+          </tr>
+          <tr>
+            <th>Day</th>
+            <td>{forcast.date.dayTemp}</td>
+            <td>{forcast.date.dayFeels}</td>
+          </tr>
+          <tr>
+            <th>Evening</th>
+            <td>{forcast.date.eveTemp}</td>
+            <td>{forcast.date.eveFeels}</td>
+          </tr>
+          <tr>
+            <th>Night</th>
+            <td>{forcast.date.nightTemp}</td>
+            <td>{forcast.date.nightFeels}</td>
+          </tr>
+        </table>
+      </div>
       <span className='dayBottom'>
         <b className='dayOfWeek'>
           {week[forcast.date.dayOfWeek]}
@@ -103,38 +130,6 @@ function DayInfo(forcast){
         <p className='high'> / {forcast.date.high} &#8457; </p>
         </p>
       </span>
-      <div className="dayInfoDataRight">  
-        <p>
-          Humidity: {forcast.date.humidity} % &emsp; Pressure: {forcast.date.pressure} hPa
-        </p>
-        <table>
-          <tr>
-            <th></th>
-            <th>Temperature (&#8457;)</th>
-            <th>Feels Like (&#8457;)</th>
-          </tr>
-          <tr>
-            <td>Morning</td>
-            <td>{forcast.date.mornTemp}</td>
-            <td>{forcast.date.mornFeels}</td>
-          </tr>
-          <tr>
-            <td>Day</td>
-            <td>{forcast.date.dayTemp}</td>
-            <td>{forcast.date.dayFeels}</td>
-          </tr>
-          <tr>
-            <td>Evening</td>
-            <td>{forcast.date.eveTemp}</td>
-            <td>{forcast.date.eveFeels}</td>
-          </tr>
-          <tr>
-            <td>Night</td>
-            <td>{forcast.date.nightTemp}</td>
-            <td>{forcast.date.nightFeels}</td>
-          </tr>
-        </table>
-      </div>
     </div>
   );
 }
