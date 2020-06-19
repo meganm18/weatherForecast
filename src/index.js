@@ -86,7 +86,6 @@ function DayInfo(forcast){
   const week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
   return (
     <div className="dayInfoData">
-      
       <div className="dayInfoDataRight">  
         <table>
           <tr>
